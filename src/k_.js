@@ -42,17 +42,3 @@
     window.k_ = init;
 
 })(window);
-
-var test = k_(function (test) {
-    console.log("Main: " + arguments[arguments.length-1]);
-    console.log(test);
-    return true;
-}).before(function (test) {
-    console.log("Before: " + arguments[0]);
-    return "before1";
-}).after(function (test) {
-    console.log("After: " + arguments[arguments.length-1]);
-    return "xixi";
-});
-
-test("haha");
